@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html data-ng-app="App">
+    <head>
+        <title>Christmas</title>
+     
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="Scripts/jquery-3.1.1.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="Styles/bootstrap.min.css">
+       
+        
+        
+        <script src="Scripts/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7//angular-route.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+       
+        <script src="Scripts/ScptingEx1.js"></script>
+        
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaScript - Christmas</a>
+                </div>
+                <div id="loggedUser">
+                    <span data-ng-model="userLogged" id="userLogged" style="color:white"></span>
+                </div>
+            </div>
+     </nav>
+    <div class="container">
+        <div class="row" style="margin-top:5%">
+            <h1 class="text-center">Marry Christmas</h1>
+            <br>
+            <hr>
+            <br>
+            <data-ng-view></data-ng-view>
+         </div>
+        <div class="row">
+                <div class="col-md-2" style="border-right: groove; padding: 1%">
+                    <form class="form-group">
+                        <label for="filterMovies" data-ng-model="filter">Filter Movie</label>
+                        <input class="form-control" id="filterMovies" data-ng-model="filterMovies" ></input>
+                    </form>
+                    <form class="form-group">
+                        <label for="filterUsers" data-ng-model="filter">Filter Users</label>
+                        <input class="form-control" id="filterUsers" data-ng-model="filterUsers" ></input>
+                    </form>
+                </div>
+                
+                 <div class="col-md-5" data-ng-controller="movieController">
+                     <div>
+                        <button type="button" class="btn btn-default col-md-12" data-ng-click="getAllMovies()">Movies</button>
+                    </div>
+                    <div id="DivOutputMovies" style="margin-top:10%"> 
+                        <ul class="list-group">
+                            <li class="list-group-item" data-ng-repeat="movie in Movies | filter: filterMovies"><b>Title:</b> {{ movie.Title }} <b>- Year:</b> {{ movie.Year }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5" data-ng-controller="userController">
+                    <button type="button" class="btn btn-default col-md-12" data-ng-click="getAllUsers()">Users</button>
+                    
+                    <div id="DivOutputUsers" style="margin-top:10%">   
+                        <ul data-ng-repeat="user in Users | filter: filterUsers" class="list-group">
+                            <li class="list-group-item"><b>Name: </b> {{ user.Name }} <b>- Username:</b> {{ user.Username }} <b>- Password:</b> {{ user.Password }}</li>
+                        </ul>              
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                document.getElementById("DivOutputMovies").style.display = "none";
+                document.getElementById("DivOutputUsers").style.display = "none";
+            });
+        </script>
+    </body>
+</html>

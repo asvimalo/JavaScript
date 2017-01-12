@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 3</title>
+        <link  rel="stylesheet" href="Styles/style.css" type="text/css">
+        
+        <link rel="stylesheet" href="Styles/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="Styles/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+        <script src="Scripts/jquery-3.1.1.min.js"></script>
+        <script src="Scripts/script.js"></script>
+        <!--<script src="Scripts/scripts2.js"></script>-->
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaScript - Lab 3</a>
+                </div>
+                
+            </div>
+        </nav>
+            <div class="container">
+                
+                    <div style="margin-top:20%;" class="row">
+                        <div class="col-md-2">
+                            
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-center col-md-12 col-sm-12" id="listHeader">
+                                <h3>List of People</h3>
+                            </div>
+                            <div>
+                               <ul id="TextOutput">
+                                </ul> 
+                            </div> 
+                            <div>
+                                    <button type="button" ondblclick="App.reloadList()" onclick="App.returnPeople()"  class="btn btn-default col-md-12 col-sm-12 col-xs-12">Show People</button> 
+                             </div> 
+                        </div>
+                        
+                        <div class="col-md-2">
+                            
+                        </div>
+
+                        
+                        
+                    </div>
+                    <hr>
+                    <div class="row" style="margin-top:5%">
+                       
+                        <div class="col-md-6">
+                            <div class="text-center" id="listHeader">
+                                <h3>Countryside's Population</h3>
+                            </div>
+                            <div >
+                               <ul  id="TextOutputCountrysidePopulation">
+                                </ul> 
+                            </div> 
+                            <div>
+                                    <button type="button"  onclick="AppEx2.FadeIn1()"  class="btn btn-defalt col-lg.6 col-md-6 col-sm-6 col-xs-6"> Fade In </button> 
+                                    <button type="button"  onclick="AppEx2.FadeOut1()"  class="btn btn-info col-lg.6 col-md-6 col-sm-6 col-xs-6">fade Out</button> 
+                             </div> 
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="text-center" id="listHeader">
+                                <h3>City Population</h3>
+                            </div>
+                            <div >
+                               <ul id="TextOutputCityPopulation">
+                                </ul> 
+                            </div> 
+                            <div>
+                                    <button type="button" onclick="AppEx2.FadeIn2()"  class="btn btn-defsult  col-lg.6 col-md-6 col-sm-6 col-xs-6">Fade In</button> 
+                                    <button type="button" onclick="AppEx2.FadeOut2()"  class="btn btn-info col-lg.6 col-md-6 col-sm-6 col-xs-6">Fade Out</button> 
+                             </div> 
+                        </div>
+                        
+
+                        
+                        
+                    </div>
+            </div>
+            <nav class="navbar navbar-inverse navbar-fixed-buttom" style="margin:15% auto 0 auto;padding: 1%">
+            <div class="container-fluid">
+                
+                
+            </div>
+        </nav>
+    </body>
+</html>

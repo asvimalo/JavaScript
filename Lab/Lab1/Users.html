@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" type="text/css" href="UsersStyle.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="UsersScript.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaScript - Lab 1</a>
+                </div>
+                
+            </div>
+        </nav>
+        <div class="container">
+        <div class="jumbotron">
+        <h1 class="headers">Registration</h1>
+        <hr>
+        <div class="row">
+	        <h2 class="text-center">Benefits as a user</h2>
+	        <hr>
+        	<div class="col-md-6">
+        		<p>
+                Den första paragrafen ska ha större tecken <br>
+                med typsnittet ”Times New Roman”. <br>
+                Texten ska vara svart<br>
+                De andra paragraferna ska ha teckensnittet <br>
+                ”Arial” och ha mörkgrå text.
+            </p>
+            </div>
+            <div class="col-md-3">
+	            <p id="p1">
+	                1 - Den första paragrafen ska ha större <br>
+	                tecken med typsnittet ”Times New Roman”.<br>
+	                Texten ska vara svart.
+	            </p>
+	             <button class="btn btn-success" onclick="changeParagraph1()">Change style pargraph n1</button>
+            </div>
+
+            <div class="col-md-3">
+            	<p id="p2">
+	                2 - De andra paragraferna ska ha teckensnittet <br>
+	                ”Arial” och ha mörkgrå text.
+            	</p>
+            	 <button class="btn btn-danger" onclick="changeParagraph2()">Change style pargraph n2</button>
+            </div>
+        </div>
+        <hr>
+        
+        
+        <div class="row backg">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                        
+                            <h2 class="text-center">Register</h2>
+                            <hr>
+                            <form id="desapear">
+                            
+                                <div class="form-group">
+                                    <label for="userName">Username </label>
+                                    <input class="form-control" id="userName" placeholder="Enter username..." type="text">
+                                    <div id="warningUsername"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Surname </label> 
+                                    <input class="form-control" placeholder="Enter surname..." id="surname" type="text">
+                                    <div id="warningSurname"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Lastname  </label>
+                                    <input class="form-control" placeholder="Enter lastname..." id="lastname" type="text">
+                                    <div id="warning"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel">Tel Number</label>
+                                    <input class="form-control" placeholder="Enter Tel Number..." id="tel" type="text">
+                                    <div id="warningLastname"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City </label>
+                                    <input class="form-control" placeholder="Enter city..." id="city" type="text">
+                                    <div id="warningCity"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age </label>
+                                    <input class="form-control" id="age" placeholder="Enter your age..." type="text">
+                                    <div id="warningAge"> 
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="form-group">
+                                    <button type="button" id="change" class="form-group btn btn-success" onclick="ChangeForm()">Send</button>
+                                 </div>
+                            </form>
+                            <div class="alert alert-success" id="message">
+                                    <strong> Success!!</strong> Thank you my dear friend!
+                                    <hr>
+                                    <div id="list">
+                                    <div>
+                            </div>
+                      
+               </div>
+               <div class="col-md-3">
+                </div>
+               
+            </div>
+            </div>
+        </div>
+        
+        <hr>
+        
+        </div>
+        
+    </body>
+</html>

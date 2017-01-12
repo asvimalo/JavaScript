@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css" media="screen" title="no title">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <title>Lab2</title>
+
+        <script src ="script.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaScript - Lab 2</a>
+                </div>
+                
+            </div>
+        </nav>
+       <div class="container"> 
+           <div class="jumbotron">
+               <br>
+               <h1 class="text-center">Registration</h1>
+               <br>
+               <hr>
+               <br>
+               
+                <div class="row">
+                     <h2 class="text-center">Comments</h2>
+                    
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                        <hr>
+                        <br>
+                        <p>Leave your comments...
+                </p>
+                <textarea id="Output"  rows="8" cols="80"></textarea>
+                <div id="enterTextData">
+
+                </div>
+                <button class="btn btn-primary" type="button" onclick="changeDiv()">Changing Div</button>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="row backg">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                        
+                            <h2 class="text-center">Register your account</h2>
+                            <hr>
+                            <form id="desapear">
+                            
+                                <div class="form-group">
+                                    <label for="userName">Username </label>
+                                    <input class="form-control" id="userName" placeholder="Enter username..." type="text">
+                                    
+                                    <div id="warningUsername"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Surname </label> 
+                                    <input class="form-control" placeholder="Enter surname..." id="surname" type="text">
+                                    <div id="warningSurname"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Lastname  </label>
+                                    <input class="form-control" placeholder="Enter lastname..." id="lastname" type="text">
+                                    <div id="warning"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel">Tel Number</label>
+                                    <input class="form-control" placeholder="Enter Tel Number..." id="tel" type="text">
+                                    <div id="warningLastname"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City </label>
+                                    <input class="form-control" placeholder="Enter city..." id="city" type="text">
+                                    <div id="warningCity"> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age </label>
+                                    <input class="form-control" id="age" placeholder="Enter your age..." type="text">
+                                    <div id="warningAge"> 
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="form-group">
+                                    <button type="button" id="change" class="form-group btn btn-success" onclick="ChangeForm()">Send</button>
+                                 </div>
+                            </form>
+                            <div class="alert alert-success text-center" id="message">
+                                    <strong> Success!!</strong> Thank you my dear friend!<br>
+                                    <hr>
+                                    <strong id="ageTenAgo"></strong>
+
+                            </div>
+                      
+               </div>
+               <div class="col-md-3">
+                   <button type="button" id="findUser" class="form-group btn btn-warning" onclick="findUser()">Find username</button>
+                   <div id="notAvailable"></div>
+                </div>
+               
+            </div>
+       </div>
+        
+    </body>
+    
+</html>

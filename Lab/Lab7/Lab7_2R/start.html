@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lab 7.2</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a onclick="WrappingAll.showProducts()" href="#">Products</a></li>
+
+            </ul>
+            <!--Control all info via nav-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="WrappingAll.showBooks()" href="#"><span class="glyphicon glyphicon-book"></span> Books</a></li>
+                <li><a onclick="WrappingAll.showDvDs()" href="#"><span class="glyphicon glyphicon-cd"></span> DvDs</a></li>
+                <li><a onclick="WrappingAll.showGames()" href="#"><span class="fa fa-gamepad"></span> Games</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--Output All Books-->
+        <div id="divBooks" class="row jumbotron">
+
+            <div class="list-group">
+                <ul id="outPutBooks" class="list-group"></ul>
+            </div>
+
+        </div>
+        <!--Output All DVDs-->
+        <div id="divDvDs" class="row jumbotron">
+            <div>
+                <ul id="outPutDVDs" class="list-group"></ul>
+            </div>
+
+        </div>
+        <!--Output All Games-->
+        <div id="divGames" class="row jumbotron">
+            <div id="outPutGames">
+                <ul class="list-group"></ul>
+            </div>
+
+        </div>
+        <div class="row jumbotron" id="divProduct">
+            <div>
+                <button onclick="helpFunctions.openAddProducts()" style="margin-top:5%" class="btn btn-default text-center list-group-item"><b>Add Product</b> <span class="glyphicon glyphicon-plus"></span></button>
+                <div id="divAddProduct" class="form-group alert alert-info">
+                    <!--Options select derived Product to open the corresponding div-->
+                    <div class="form-group">
+                        <label for="produItem">Product:</label>
+                        <select id="produItem" onchange="helpFunctions.chooseYourProduct()" class="form-control">
+                            <option value="">Products</option>
+                            <option value="book" class="form-control">Book</option>
+                            <option value="dvd" class="form-control">DVD</option>
+                            <option value="game" class="form-control">Game</option>
+                        </select>
+                    </div>
+                    <!--Options Product-->
+                    <form class="form-group">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" class="form-control" id="productName" />
+                    </form>
+                    <form class="form-group">
+                        <label for="category">Category:</label>
+                        <input type="text" class="form-control" id="category" />
+                    </form>
+                    <form class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" id="price" />
+                    </form>
+                    <form class="form-group">
+                        <label for="articleNumber">Article Number:</label>
+                        <input type="text" class="form-control" id="articleNumber" />
+                    </form>
+                    <!--Options derived Product (DVD,Book or Games)-->
+                    <form id="authorNameDiv" class="form-group">
+                        <label for="authorName">Author's Name:</label>
+                        <input type="text" class="form-control" id="authorName" />
+                    </form>
+                    <form id="movieLengthDiv" class="form-group">
+                        <label for="movieLength">Movie Length:</label>
+                        <input type="text" class="form-control" id="movieLength" />
+                    </form>
+                    <form id="osDiv" class="form-group">
+                        <label for="os">OS: </label>
+                        <input type="text" class="form-control" id="os" />
+                    </form>
+                    <hr />
+                    <!--Confirm Adding product TESTING TODO-->
+                    <button class="btn btn-danger col-md-12 col-lg-12 col-sm-12" onclick="WrappingAll.addProduct()"><b>Confirm to Add Product </b><span class="glyphicon glyphicon-plus"></span></button>
+                    <hr />
+                    <br />
+                </div>
+                <!--Output All Product-->
+                <div class="list-group">
+                    <ul id="outPutProduct"></ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

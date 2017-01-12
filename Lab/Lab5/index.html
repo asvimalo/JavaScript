@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv" data-ng-app="App">
+    <head>
+        <title>Lab 5 - Factories and Controllers</title>
+        <link  rel="stylesheet" href="css/style.css" type="text/css">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+       <script src="scripts/jquery-3.1.1.min.js"></script>
+        <script src="scripts/angular.min.js"></script>
+        
+        <script src="scripts/educationController.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">JavaScript - LAB 5</a>
+                </div>
+                
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <div class="row">
+                <h1 id="firstHeader" class="text-center">Lab 5 - Factories and Controllers</h1>
+                <hr>
+                <div class="col-md-3" >
+                      <div>                     
+                        <button data-ng-controller="studentsController" data-ng-click="openAddDivFilter()" class="btn btn-primary text-center col-md-12">Filter</button>
+                            <div id="filterStudents" >   
+                                <br>
+                                <form class="form-group">
+                                    <label for="studentName">Student</label><br>
+                                    <input type="text" class="form-group" data-ng-model="filterList" id="studentName" placeholder="Enter student name...">
+                                </form>
+                                <form class="form-group">
+                                    <label for="course">Course</label><br>
+                                    <input type="text" class="form-group" data-ng-model="filterList2" id="course" placeholder="Enter course name...">
+                                </form>
+                            </div>
+                       </div>
+                       <div>
+                           <button data-ng-controller="studentsController" data-ng-click="openAddDiv()" class="btn btn-primary text-center col-md-12">Add Student</button>                       
+                                <!--<button class="btn btn-primary col-md-12" >Add Student</button>-->
+                                <div id="addStudents" data-ng-controller="studentsController">
+                                    <br>
+                                    <form class="form-group">
+                                        <label for="signStudent"><b>Name</b></label><br>
+                                        <input type="text" class="form-group" data-ng-model="newName" id="signStudent" placeholder="Enter a name...">
+                                    </form>
+                                    <form class="form-group">
+                                        <label for="signCourse"><b>Course</b></label><br>
+                                        <input type="text" class="form-group" data-ng-model="newCourse" id="signCourse" placeholder="Enter a course name...">
+                                    </form>
+                                    
+                                    <button class="btn btn-danger col-md-12" data-ng-click="addStudentToDataBase()">Add Student To Dadabase</button>
+                                    <div id="foundOrNot">
+                                    </div>
+                                </div>
+                         </div>  
+                      </div>
+                    
+                <div class="col-md-6">                   
+                    <div  data-ng-controller="studentsController">
+                         <div class="list-group">
+                             <button data-ng-click="showStudents()" class="btn btn-success col-md-12">Students</button>
+                             <div id="students">
+                                 <li class="list-group-item" data-ng-repeat="student in students | filter: filterList"><b>Name:</b> {{ student.name }} <b>- Status:</b> {{ student.status }} <b>- Course:</b> {{ student.course }}</li>
+                             </div>                     
+                         </div>
+                    </div>                  
+                </div>
+                <div class="col-md-3">
+                    <div data-ng-controller="coursesController">
+	                       <div class="list-group">
+	                            <button data-ng-click="showCourses()" class="btn btn-success col-md-12">Courses</button>
+	                            <div id="courses">
+	                            	<li class="list-group-item" data-ng-repeat="course in courses | filter: filterList2" > {{ course.course }} </li>
+	                            </div>
+
+	                        </div> 
+	                                               
+                    </div>
+                    
+                </div>                   
+            </div> 
+            <div style="margin-top:5%" class="row">
+            	<div class="col-md-6"> 
+
+            	</div>
+            	<div class="col-md-6">   
+            		
+            	</div>
+            </div> 
+            <div style="margin-top:20%">
+
+            </div> 
+            
+        </div> 
+        <nav  class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                
+                
+            </div>
+        </nav>                   
+    </body>
+</html>
+
+<!--
+                        Person Name:<br>
+                        <input type="text" id="name" data-ng-model="newPersonName"><br>
+                        Person City:<br>
+                        <input type="text" id="city" data-ng-model="newPersonCity"><br>
+                        <button data-ng-click="AddPerson()" class="btn btn-primary" >Add Person</button>-->

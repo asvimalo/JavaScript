@@ -1,0 +1,30 @@
+
+.headers {
+    text-align: center;
+    
+}
+#message {
+    visibility: hidden;
+}
+.p1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: black;
+}
+
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 20px;
+}
+
+.changedp1{
+    font-family: 'Times New Roman', Times, serif;
+    color: limegreen;
+    font-size: 5px;
+}
+.changedp2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 5px;
+}
